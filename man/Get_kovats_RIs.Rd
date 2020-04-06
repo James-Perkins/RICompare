@@ -17,5 +17,5 @@ Get_kovats_RIs(Full_data, type = "kovats", polarity = "non-polar")
 This is a wrapper function for the webchem function `nist_ri()`, which scrapes the NIST database for all RI data for all compounds in a given input file. It is not as efficient as it could be, because the nist_ri function needs to be called 3 times, once for each temperature program option. For some reason, it does not take a vector as an argument (using a vector of parameters doesn't throw an error, but only the first parameter is used). Will take some time to run, particularly if the number of unique compounds in the dataset is large.
 }
 \examples{
-Get_kovats_RIs(Full_data = na.omit(read.csv("Sample_data.csv", skip = 1)))
+Get_kovats_RIs(Full_data = na.omit(Sample_data))
 }
