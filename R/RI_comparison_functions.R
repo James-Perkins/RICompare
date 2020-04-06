@@ -6,7 +6,7 @@
 #' @param polarity The polarity of the GC column. Defaults to "non-polar". Other option is "polar".
 #' @export
 #' @examples
-#' Get_kovats_RIs(Full_data = na.omit(read.csv("Sample_data.csv", skip = 1)))
+#' Get_kovats_RIs(Full_data = na.omit(Sample_data))
 
 Get_kovats_RIs <- function(Full_data, type = "kovats", polarity = "non-polar"){
   Data <- Full_data[!duplicated(Full_data$CAS),]
@@ -94,3 +94,4 @@ Only_database_matches <- function(Full_data, RI_data, Database_RI = "RI.mean"){
   New <- Combined[,c("CAS", "Name", "RI", Database_RI, "File")]
   RI_matches <- New[!is.na(New$RI.mean),]
 }
+
