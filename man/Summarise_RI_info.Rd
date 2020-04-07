@@ -12,3 +12,6 @@ Summarise_RI_info(RI_data)
 \description{
 This function takes output of `nist_ri` or `Get_kovats_RIs` as an input and returns a matrix of CAS number, mean, standard deviation of the mean, and number of database samples.
 }
+\examples{
+Summarise_RI_info(Sample_RI)
+}
